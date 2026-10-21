@@ -1,215 +1,51 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Premium home interiors in Hyderabad. Explore elegant designs and estimate your interior budget.">
-<title>Atelier Living | Interior Design Studio</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171717">
+<meta name="description" content="SM Interiors — considered interiors, refined materials and spaces designed around you in Jeedimetla, Hyderabad.">
+<title>SM Interiors | Spaces With Soul</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f6f3ed;--ink:#262820;--green:#48533f;--muted:#77796f;--line:#deddd3;--gold:#c3aa7c;--white:#fffefa}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
-a{color:inherit;text-decoration:none}
-button,input,select{font:inherit}
-.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
-.top{background:#e8e5dc;text-align:center;padding:8px;font-size:10px;letter-spacing:2px}
-nav{height:76px;position:sticky;top:0;z-index:10;background:#f6f3edf2;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.navinner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-weight:800;letter-spacing:3px;font-size:17px}
-.logo small{display:block;font-size:8px;letter-spacing:4px;color:var(--muted)}
-.links{display:flex;gap:25px;font-size:12px}
-.btn{display:inline-block;padding:13px 19px;background:var(--green);color:white;border:1px solid var(--green);font-size:12px;font-weight:bold;cursor:pointer;border-radius:2px}
-.btn:hover{opacity:.87}
-.btn.outline{background:transparent;color:var(--ink);border-color:#a8a99e}
-.menu{display:none;background:none;border:0;font-size:24px}
-.eyebrow{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--green);font-weight:bold}
-h1,h2,h3,p{margin-top:0}
-h1,h2,h3{line-height:1.12;letter-spacing:-1.5px}
-h1{font-size:clamp(42px,6vw,76px);font-weight:500;margin:18px 0}
-h1 em{font-family:Georgia,serif;color:var(--green);font-weight:normal}
-h2{font-size:clamp(32px,4vw,48px);font-weight:500;margin:12px 0}
-h3{font-size:21px}
-.lead{color:var(--muted);font-size:15px;max-width:550px}
-.hero{padding:38px 0 65px}
-.hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
-.hero-copy{padding:20px 0}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 30px}
-.stats{display:flex;gap:24px;border-top:1px solid var(--line);padding-top:18px}
-.stats strong{display:block;font-size:13px}
-.stats span{display:block;font-size:10px;color:var(--muted)}
-.heroimg{height:550px;position:relative;overflow:hidden;background:#d7d2c7}
-.heroimg img,.project img,.quoteimg img{width:100%;height:100%;object-fit:cover;display:block}
-.imglabel{position:absolute;bottom:18px;left:18px;background:#f6f3edf2;padding:13px 17px;font-family:Georgia,serif;font-size:19px}
-.bar{background:var(--green);color:#f6f3ed;padding:20px 0}
-.barinner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:10px;letter-spacing:1.4px;text-transform:uppercase}
-section{padding:78px 0}
-.head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:28px}
-.head p{color:var(--muted);font-size:13px;margin-bottom:0}
-.projects{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:15px}
-.projectimg{height:300px;overflow:hidden;background:#ddd}
-.project:first-child .projectimg{height:355px}
-.project img{transition:transform .4s}
-.project:hover img{transform:scale(1.04)}
-.projectinfo{padding:13px 0;border-bottom:1px solid var(--line)}
-.projectinfo strong{font-size:13px}
-.projectinfo span{display:block;font-size:10px;color:var(--muted)}
-.note{font-size:10px;color:var(--muted);margin-top:12px}
-.services{padding-top:20px}
-.servicegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.service{background:#ebe8df;padding:22px 18px;min-height:185px}
-.service .number{font-family:Georgia,serif;color:var(--green);font-size:23px}
-.service h3{font-size:17px;margin:20px 0 8px}
-.service p{font-size:12px;color:var(--muted);margin:0}
-.process{background:#e9e7df}
-.processgrid{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px}
-.steps{border-top:1px solid #cccabe}
-.step{display:grid;grid-template-columns:40px 1fr;gap:12px;padding:19px 0;border-bottom:1px solid #cccabe}
-.step b{font-family:Georgia,serif;color:var(--green);font-size:23px;font-weight:normal}
-.step h3{font-size:16px;margin:0 0 6px}
-.step p{font-size:12px;color:var(--muted);margin:0}
-.calculator{background:#252920;color:#f7f4ec}
-.calculator .eyebrow{color:#cbd3bf}
-.calculator .lead{color:#c1c3b9}
-.calcgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:38px;margin-top:28px;align-items:start}
-.calcbox{background:var(--white);color:var(--ink);padding:26px;border-radius:3px}
-.progress{display:flex;gap:6px;margin-bottom:25px}
-.progress span{height:3px;flex:1;background:#ddd}
-.progress span.active{background:var(--green)}
-.pane{display:none}
-.pane.active{display:block}
-.pane h3{font-size:24px;margin-bottom:5px}
-.sub{font-size:12px;color:var(--muted);margin-bottom:20px}
-.label{display:block;font-size:12px;font-weight:bold;margin:16px 0 8px}
-.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.choice{padding:12px 9px;background:white;border:1px solid var(--line);text-align:left;cursor:pointer}
-.choice strong{display:block;font-size:13px}
-.choice small{font-size:10px;color:var(--muted)}
-.choice.selected{background:#edf0e8;border-color:var(--green);box-shadow:inset 0 0 0 1px var(--green)}
-.field{width:100%;padding:12px;border:1px solid #d9d8cf;background:white;color:var(--ink);border-radius:2px}
-.rooms{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.room{border:1px solid var(--line);padding:10px;display:flex;align-items:center;justify-content:space-between;gap:6px}
-.room strong{font-size:11px}
-.counter{display:flex;align-items:center;gap:8px}
-.counter button{width:25px;height:25px;border:1px solid var(--line);background:#f6f5ef;cursor:pointer}
-.counter span{font-size:12px;min-width:10px;text-align:center}
-.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
-.controls{display:flex;justify-content:space-between;gap:10px;margin-top:23px}
-.controls button{min-width:105px}
-.result{display:none;background:#edf0e8;border:1px solid #d4dacd;padding:18px;margin-top:20px}
-.result.show{display:block}
-.result small{display:block;color:var(--muted)}
-.result strong{font-size:clamp(21px,3vw,29px)}
-.result p{font-size:11px;color:var(--muted);margin:7px 0}
-.resultactions{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}
-.resultactions .btn{font-size:10px;padding:10px}
-.calcside h3{font-size:26px}
-.calcside p{color:#c1c3b9;font-size:13px}
-.calcside ul{list-style:none;padding:0;margin:24px 0}
-.calcside li{padding:12px 0;border-bottom:1px solid #45483f;font-size:12px}
-.calcside li span{color:#cbd3bf;margin-right:8px}
-.quote{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}
-.quoteimg{height:380px;overflow:hidden}
-blockquote{font-family:Georgia,serif;font-size:clamp(24px,3vw,37px);line-height:1.3;margin:20px 0}
-.faqgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px}
-details{padding:17px 0;border-bottom:1px solid var(--line)}
-summary{cursor:pointer;font-weight:bold;font-size:13px}
-details p{font-size:12px;color:var(--muted);margin:12px 0 0}
-.cta{background:#dfe3d7;padding:55px 0}
-.ctainner{display:flex;justify-content:space-between;align-items:center;gap:25px}
-.ctainner h2{max-width:620px;margin-bottom:0}
-footer{background:#252920;color:#f7f4ec;padding:40px 0 20px}
-.footerrow{display:flex;justify-content:space-between;gap:25px;padding-bottom:25px;border-bottom:1px solid #45483f}
-footer p,footer a{font-size:12px;color:#c1c3b9}
-.footerlinks{display:flex;gap:18px;flex-wrap:wrap}
-.bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:10px;color:#a9ac9f;padding-top:17px}
-.float{position:fixed;right:17px;bottom:17px;z-index:5;background:var(--green);color:white;padding:13px 16px;border-radius:30px;font-size:11px;font-weight:bold;box-shadow:0 6px 25px #0002}
-@media(max-width:850px){.hero-grid{gap:22px}.heroimg{height:440px}.projects{grid-template-columns:1fr 1fr}.project:first-child{grid-column:span 2}.project:first-child .projectimg{height:300px}.servicegrid{grid-template-columns:1fr 1fr}.calcgrid{grid-template-columns:1fr}.processgrid{gap:25px}}
-@media(max-width:620px){.wrap{width:calc(100% - 30px)}nav{height:65px}.links{display:none;position:absolute;top:65px;left:0;right:0;background:var(--bg);padding:20px;flex-direction:column;gap:17px;border-bottom:1px solid var(--line)}.links.open{display:flex}.navinner>.btn{display:none}.menu{display:block}.hero{padding:25px 0 45px}.hero-grid{grid-template-columns:1fr;gap:20px}.heroimg{height:390px}.stats{gap:15px}.stats strong{font-size:11px}.barinner{justify-content:center;text-align:center}.barinner span{width:43%}section{padding:58px 0}.head{align-items:flex-start;flex-direction:column}.projects{gap:12px}.projectimg,.project:first-child .projectimg{height:220px}.projectinfo strong{font-size:11px}.servicegrid{gap:9px}.service{padding:16px 12px;min-height:170px}.service h3{font-size:15px}.processgrid,.quote,.faqgrid{grid-template-columns:1fr;gap:25px}.quoteimg{height:290px}.calcbox{padding:17px}.choices{grid-template-columns:1fr 1fr}.rooms{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.ctainner{align-items:flex-start;flex-direction:column}.footerrow{flex-direction:column}.float{right:10px;bottom:10px}}
+:root{--black:#171817;--charcoal:#242623;--cream:#f4f1eb;--paper:#fffdfa;--sand:#c4a77d;--muted:#77776f;--line:#dfd9cf;--white:#fff;--green:#414d3d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--cream);color:var(--black);font-family:'DM Sans',sans-serif}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{font:inherit}.topline{background:var(--black);color:#e8e1d6;display:flex;justify-content:space-between;padding:10px 6vw;font-size:9px;letter-spacing:.18em;text-transform:uppercase}.topline span{color:var(--sand)}
+header{height:84px;position:sticky;top:0;z-index:20;background:#f4f1ebed;backdrop-filter:blur(15px);border-bottom:1px solid #d9d2c7;display:flex;align-items:center;justify-content:space-between;padding:0 6vw}.logo{display:flex;align-items:center;gap:12px}.monogram{width:43px;height:43px;border:1px solid var(--black);display:grid;place-items:center;font:italic 18px 'Playfair Display';letter-spacing:-.08em}.logotext{font:700 22px 'Manrope';letter-spacing:-.07em}.logosub{font-size:8px;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-top:2px}.nav{display:flex;align-items:center;gap:28px;font-size:11px;font-weight:700}.nav a:not(.navbtn):hover{color:#a17c4e}.navbtn{background:var(--black);color:white;padding:14px 18px}.hamb{display:none;border:0;background:none;font-size:24px;cursor:pointer}
+.hero{padding:24px 3vw 50px}.heroimage{min-height:680px;position:relative;overflow:hidden;background:linear-gradient(90deg,#161817f5 0%,#171817d9 36%,#17181759 70%,#17181710 100%),url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=90') center/cover;color:white}.heroimage:after{content:"";position:absolute;inset:14px;border:1px solid #ffffff50;pointer-events:none}.herocopy{position:relative;z-index:2;max-width:740px;padding:95px 8%}.eyebrow{font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:#d7c3a4;font-weight:700}.eyebrow:before{content:"✳";margin-right:11px;color:var(--sand)}h1,h2,h3,p{margin-top:0}h1{font:400 clamp(56px,7vw,98px)/.98 'Playfair Display';letter-spacing:-.055em;margin:25px 0}h1 em{color:#d1b995;font-weight:400}.herocopy p{font-size:13px;line-height:2;color:#e0dfd8;max-width:450px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 21px;font-size:10px;font-weight:700;letter-spacing:.05em;transition:.25s;border:1px solid transparent}.btn:hover{transform:translateY(-2px)}.btnlight{background:var(--cream);color:var(--black)}.btnoutline{border-color:#ffffff9c;color:white}.btnblack{background:var(--black);color:white}.heroindex{position:absolute;right:6%;bottom:6%;z-index:2;border-left:1px solid #d4bd9b;padding:4px 0 4px 18px}.heroindex strong{font:36px 'Playfair Display';display:block}.heroindex span{font-size:8px;letter-spacing:.19em;text-transform:uppercase;color:#e2d6c4}
+.trustbar{display:flex;justify-content:center;align-items:center;gap:30px;flex-wrap:wrap;padding:22px 12px;border-bottom:1px solid var(--line);font-size:9px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#4c5148}.trustbar span:before{content:"✳";color:#b18e60;margin-right:9px}
+.section{padding:95px 7vw}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:38px}.kicker{font-size:9px;letter-spacing:.23em;text-transform:uppercase;color:#9b784c;font-weight:700;margin-bottom:14px}.section h2,.aboutcopy h2,.contactcopy h2{font:400 clamp(40px,4.6vw,64px)/1.03 'Playfair Display';letter-spacing:-.045em;margin:0}.sectionhead>p{max-width:385px;color:var(--muted);font-size:12px;line-height:2;margin:0}
+.projectgrid{display:grid;grid-template-columns:1.08fr .92fr;gap:20px}.project{position:relative;overflow:hidden;min-height:460px;background:#d8d0c4}.project img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s}.project:hover img{transform:scale(1.035)}.project:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#141613dd,transparent 66%)}.projectcaption{position:absolute;bottom:0;left:0;right:0;z-index:1;color:white;padding:30px}.projectcaption span{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#d9c6a9}.projectcaption h3{font:31px 'Playfair Display';margin:9px 0}.projectcaption p{font-size:11px;color:#deded7;line-height:1.7;margin:0;max-width:420px}.projectstack{display:grid;grid-template-rows:1fr 1fr;gap:20px}.projectstack .project{min-height:220px}.projectstack .projectcaption{padding:22px}.projectstack .projectcaption h3{font-size:25px}
+.services{background:#e9e4da}.servicegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#d3cabc;border:1px solid #d3cabc}.service{background:#e9e4da;padding:31px 26px;min-height:245px;transition:.25s}.service:hover{background:#f8f5ef}.service .num{font:italic 20px 'Playfair Display';color:#ad8c60}.service h3{font:26px 'Playfair Display';margin:25px 0 12px}.service p{font-size:11px;line-height:1.9;color:#73746d;margin:0}.service a{display:inline-block;margin-top:20px;font-size:9px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;border-bottom:1px solid #b79a72;padding-bottom:5px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}.aboutvisual{position:relative;min-height:560px}.aboutvisual img{width:88%;height:530px;object-fit:cover}.aboutvisual .smallimg{position:absolute;width:45%;height:220px;object-fit:cover;right:0;bottom:0;border:9px solid var(--cream)}.aboutcopy p{font-size:12px;line-height:2;color:var(--muted);max-width:470px;margin:22px 0}.stats{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:30px 0}.stat{border-top:1px solid var(--line);padding-top:14px}.stat strong{font:23px 'Playfair Display';display:block}.stat span{font-size:9px;letter-spacing:.08em;color:var(--muted)}
+.process{background:var(--black);color:white}.process .sectionhead>p{color:#bcbcb3}.processgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px}.step{border-top:1px solid #55574f;padding-top:20px}.step span{font:italic 21px 'Playfair Display';color:#c8aa80}.step h3{font:24px 'Playfair Display';margin:23px 0 10px}.step p{font-size:11px;line-height:1.9;color:#bdbeb5}
+.gallerygrid{display:grid;grid-template-columns:1.1fr .9fr .9fr;grid-template-rows:230px 230px;gap:13px}.gallerygrid a{overflow:hidden}.gallerygrid img{width:100%;height:100%;object-fit:cover;transition:.4s}.gallerygrid a:hover img{transform:scale(1.04)}.gallerygrid .tall{grid-row:span 2}.gallerynote{font-size:9px;line-height:1.7;color:var(--muted);margin:18px 0 0}
+.testimonial{background:#e9e4da;text-align:center}.quote-mark{font:75px 'Playfair Display';line-height:.8;color:#b99b72}.quote{font:clamp(26px,3.3vw,43px)/1.35 'Playfair Display';max-width:830px;margin:25px auto}.quote-sub{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.contact{padding:0 3vw 48px}.contactinner{display:grid;grid-template-columns:1fr 1fr;background:var(--black);color:white}.contactcopy{padding:65px 9%;align-self:center}.contactcopy h2{margin:18px 0}.contactcopy>p{font-size:12px;line-height:1.9;color:#c9c9c0;max-width:430px}.contactdetails{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:28px 0}.detail-label{font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#d4b88f;margin-bottom:8px}.detail-value{font-size:11px;line-height:1.9;color:#eeece5}.contactvisual{min-height:500px;display:grid;place-items:center;background:linear-gradient(#17181735,#17181765),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85') center/cover}.contactcard{background:var(--cream);color:var(--black);padding:30px;max-width:315px;margin:20px}.contactcard small{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#94764e}.contactcard h3{font:29px 'Playfair Display';margin:12px 0}.contactcard p{font-size:11px;line-height:1.8;color:var(--muted)}.contactcard a{font-size:9px;font-weight:700;border-bottom:1px solid #b99a70;padding-bottom:5px}
+footer{background:#111311;color:#ece9e1;padding:42px 7vw 22px}.footertop{display:flex;justify-content:space-between;align-items:center;gap:25px;padding-bottom:30px;border-bottom:1px solid #ffffff24}.footertop .monogram{border-color:#c5ad8c;color:#c5ad8c}.footlinks{display:flex;gap:20px;flex-wrap:wrap;font-size:10px;color:#cfcec6}.footbottom{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;padding-top:20px;font-size:9px;color:#9e9f96}.floatcontact{position:fixed;right:20px;bottom:20px;z-index:15;background:#222620;color:white;padding:14px 19px;box-shadow:0 10px 30px #0002;font-size:11px;font-weight:700;border:1px solid #c3a67d}
+@media(max-width:850px){header{height:74px;padding:0 5vw}.nav{gap:15px}.nav a:not(.navbtn){display:none}.hamb{display:block}.heroimage{min-height:650px;background-position:60% center}.herocopy{padding:70px 7% 120px}.section{padding:72px 6vw}.sectionhead{display:block}.sectionhead>p{margin-top:17px}.projectgrid{grid-template-columns:1fr}.project{min-height:400px}.projectstack{grid-template-columns:1fr 1fr;grid-template-rows:auto}.projectstack .project{min-height:240px}.servicegrid{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr;gap:35px}.aboutvisual{min-height:460px}.aboutvisual img{height:440px}.processgrid{grid-template-columns:repeat(2,1fr);row-gap:35px}.gallerygrid{grid-template-columns:1fr 1fr;grid-template-rows:190px 190px 190px}.gallerygrid .tall{grid-row:span 2}.contactinner{grid-template-columns:1fr}.contactvisual{min-height:340px}.footertop{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){.topline{font-size:7px;gap:10px}.logotext{font-size:20px}.monogram{width:38px;height:38px}.navbtn{padding:11px;font-size:9px}.hero{padding:14px 3vw 32px}.heroimage{min-height:680px}.herocopy{padding:52px 7% 125px}h1{font-size:58px}.trustbar{gap:12px;font-size:8px}.section{padding:62px 5vw}.section h2,.aboutcopy h2,.contactcopy h2{font-size:41px}.project{min-height:350px}.projectstack{grid-template-columns:1fr}.projectstack .project{min-height:220px}.servicegrid{grid-template-columns:1fr}.service{min-height:200px}.service h3{margin:17px 0 9px}.aboutvisual{min-height:350px}.aboutvisual img{height:330px;width:90%}.aboutvisual .smallimg{height:155px;width:48%;border-width:6px}.processgrid{grid-template-columns:1fr 1fr;gap:22px}.gallerygrid{gap:8px;grid-template-rows:150px 150px 150px}.contactcopy{padding:45px 7%}.contactdetails{gap:12px}.footlinks{gap:14px}.floatcontact{right:12px;bottom:12px;padding:12px 15px}}
 </style>
 </head>
 <body>
-<div class="top">THOUGHTFUL INTERIORS · DESIGNED AROUND YOUR LIFE · HYDERABAD</div>
-<nav><div class="wrap navinner">
-<a class="logo" href="#home">ATELIER LIVING<small>INTERIOR STUDIO</small></a>
-<div class="links" id="links"><a href="#projects">Projects</a><a href="#services">Services</a><a href="#process">Our Process</a><a href="#calculator">Cost Calculator</a></div>
-<a class="btn" href="#calculator">Estimate Your Home ↗</a>
-<button class="menu" id="menu" aria-label="Open menu">☰</button>
-</div></nav>
-<main id="home">
-<section class="hero"><div class="wrap hero-grid">
-<div class="hero-copy"><div class="eyebrow">Interior design, made personal</div>
-<h1>Spaces that feel <em>like home.</em></h1>
-<p class="lead">Beautifully considered interiors, made for the way you live. From the first sketch to the final detail, let's bring your vision to life.</p>
-<div class="actions"><a class="btn" href="#projects">Explore Our Work ↗</a><a class="btn outline" href="#calculator">Calculate Your Budget</a></div>
-<div class="stats"><div><strong>Personal</strong><span>Designed around you</span></div><div><strong>Thoughtful</strong><span>Beauty meets function</span></div><div><strong>Complete</strong><span>Plan to finish</span></div></div></div>
-<div class="heroimg"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85" alt="Warm modern living room"><div class="imglabel">Warm minimalism, timelessly done.</div></div>
-</div></section>
-<div class="bar"><div class="wrap barinner"><span>Thoughtful space planning</span><span>✳ Materials with purpose</span><span>✳ Personalised design</span><span>✳ A clear process</span></div></div>
-<section id="projects"><div class="wrap"><div class="head"><div><div class="eyebrow">Selected inspiration</div><h2>Spaces with a story.</h2><p>Thoughtful details, beautiful textures and calm palettes.</p></div><a class="btn outline" href="#calculator">Plan Your Space ↗</a></div>
-<div class="projects">
-<article class="project"><div class="projectimg"><img loading="lazy" src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1100&q=85" alt="Elegant neutral living room"></div><div class="projectinfo"><strong>The Quiet Living Room</strong><span>Living · Contemporary</span></div></article>
-<article class="project"><div class="projectimg"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Open-plan home interior"></div><div class="projectinfo"><strong>Open & Airy</strong><span>Full Home · Modern</span></div></article>
-<article class="project"><div class="projectimg"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Minimal modern interior"></div><div class="projectinfo"><strong>Natural Balance</strong><span>Details · Minimal</span></div></article>
-</div><p class="note">Demo imagery for inspiration. Replace with the company's real projects before publishing.</p></div></section>
-<section class="services" id="services"><div class="wrap"><div class="head"><div><div class="eyebrow">What we can create</div><h2>Every room, considered.</h2><p>Practical layouts, beautiful finishes and details that make a house feel personal.</p></div></div>
-<div class="servicegrid"><article class="service"><span class="number">01</span><h3>Full Home Interiors</h3><p>A cohesive design from entryway to final room.</p></article><article class="service"><span class="number">02</span><h3>Modular Kitchens</h3><p>Smart storage, hardworking surfaces and easy flow.</p></article><article class="service"><span class="number">03</span><h3>Bedrooms & Wardrobes</h3><p>Restful palettes and storage made for your routine.</p></article><article class="service"><span class="number">04</span><h3>Living & Dining</h3><p>Welcoming spaces for everyday moments.</p></article></div></div></section>
-<section class="process" id="process"><div class="wrap processgrid"><div><div class="eyebrow">A clear, collaborative journey</div><h2>From first idea to final detail.</h2><p class="lead">Good design should feel exciting, not overwhelming.</p><a class="btn" href="#calculator">Start With an Estimate ↗</a></div><div class="steps">
-<div class="step"><b>01</b><div><h3>Tell us about your home</h3><p>Share your space, needs, style and budget.</p></div></div>
-<div class="step"><b>02</b><div><h3>Shape the design</h3><p>Explore layouts, materials and concepts tailored to you.</p></div></div>
-<div class="step"><b>03</b><div><h3>Review the details</h3><p>Discuss finishes, storage, lighting and scope.</p></div></div>
-<div class="step"><b>04</b><div><h3>Bring it to life</h3><p>Coordinate the agreed work and review your space.</p></div></div>
-</div></div></section>
-<section class="calculator" id="calculator"><div class="wrap">
-<div class="eyebrow">Your home, your budget</div><h2>Estimate your interior cost.</h2><p class="lead">Make a few quick choices to get an indicative planning range. Your final quote depends on measurements, materials and scope.</p>
-<div class="calcgrid"><div class="calcbox">
-<div class="progress" id="progress"><span class="active"></span><span></span><span></span></div>
-<div class="pane active" data-step="0"><h3>First, your home.</h3><p class="sub">Choose your property type and approximate size.</p><label class="label">Property configuration</label>
-<div class="choices" id="bhk"><button class="choice selected" data-bhk="1"><strong>1 BHK</strong><small>Compact</small></button><button class="choice" data-bhk="2"><strong>2 BHK</strong><small>Two bedrooms</small></button><button class="choice" data-bhk="3"><strong>3 BHK</strong><small>Three bedrooms</small></button><button class="choice" data-bhk="4"><strong>4 BHK</strong><small>Extra space</small></button><button class="choice" data-bhk="5"><strong>Villa / 5+</strong><small>Larger home</small></button></div>
-<label class="label" for="area">Approximate area (sq. ft.)</label><input class="field" id="area" type="number" min="250" max="10000" value="650"><p class="note">You can adjust this estimate.</p></div>
-<div class="pane" data-step="1"><h3>What should we design?</h3><p class="sub">Adjust the rooms you want included.</p><div class="rooms" id="rooms">
-<div class="room"><strong>Living room</strong><div class="counter"><button data-room="living" data-d="-1">−</button><span id="n-living">1</span><button data-room="living" data-d="1">+</button></div></div>
-<div class="room"><strong>Kitchen</strong><div class="counter"><button data-room="kitchen" data-d="-1">−</button><span id="n-kitchen">1</span><button data-room="kitchen" data-d="1">+</button></div></div>
-<div class="room"><strong>Bedrooms</strong><div class="counter"><button data-room="bedrooms" data-d="-1">−</button><span id="n-bedrooms">1</span><button data-room="bedrooms" data-d="1">+</button></div></div>
-<div class="room"><strong>Bathrooms</strong><div class="counter"><button data-room="bathrooms" data-d="-1">−</button><span id="n-bathrooms">1</span><button data-room="bathrooms" data-d="1">+</button></div></div>
-<div class="room"><strong>Wardrobes</strong><div class="counter"><button data-room="wardrobes" data-d="-1">−</button><span id="n-wardrobes">1</span><button data-room="wardrobes" data-d="1">+</button></div></div>
-<div class="room"><strong>False ceiling</strong><div class="counter"><button data-room="ceiling" data-d="-1">−</button><span id="n-ceiling">0</span><button data-room="ceiling" data-d="1">+</button></div></div>
-</div><label class="label" for="finish">Finish preference</label><select class="field" id="finish"><option value="1">Essential — practical & simple</option><option value="1.35" selected>Premium — refined finishes</option><option value="1.75">Luxury — elevated details</option></select></div>
-<div class="pane" data-step="2"><h3>Let's talk about your home.</h3><p class="sub">Enter your details to prepare a WhatsApp quote request.</p><div class="formgrid"><div><label class="label" for="name">Your name</label><input class="field" id="name" placeholder="Full name" autocomplete="name"></div><div><label class="label" for="phone">Mobile number</label><input class="field" id="phone" placeholder="10-digit number" inputmode="tel" autocomplete="tel"></div><div><label class="label" for="city">Project location</label><select class="field" id="city"><option>Hyderabad</option><option>Secunderabad</option><option>Other location</option></select></div><div><label class="label" for="timeline">Project timeline</label><select class="field" id="timeline"><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Just exploring</option></select></div></div><p id="error" style="color:#a13b2b;font-size:12px;margin-top:10px" role="alert"></p></div>
-<div class="controls"><button class="btn outline" id="back" style="visibility:hidden">← Back</button><button class="btn" id="next">Continue →</button></div>
-<div class="result" id="result" aria-live="polite"><small>Indicative planning range</small><strong id="range"></strong><p id="breakdown"></p><div class="resultactions"><button class="btn" id="send">Request Quote on WhatsApp ↗</button><button class="btn outline" id="edit">Edit details</button></div></div>
-</div>
-<aside class="calcside"><h3>A useful starting point, not a surprise quote.</h3><p>Costs vary by material, hardware, measurements, site conditions and exact work involved. This estimate helps you begin planning.</p><ul><li><span>✓</span> Estimate by home size and room selection</li><li><span>✓</span> Compare essential, premium and luxury finishes</li><li><span>✓</span> Share your selections in a WhatsApp message</li><li><span>✓</span> No payment needed to use the calculator</li></ul><p style="font-size:10px">Illustrative demo rates only — not a formal quotation or guaranteed market price. Confirm actual pricing with the interior company.</p></aside>
-</div></div></section>
-<section><div class="wrap quote"><div class="quoteimg"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85" alt="Calm modern home interior"></div><div><div class="eyebrow">The details make the difference</div><blockquote>“A well-designed home isn't just seen. It's felt in the way every day unfolds.”</blockquote><p class="lead">The best spaces balance how they look with how you live — with room to relax, gather, work and grow.</p><a class="btn outline" href="#calculator">Let's plan your space ↗</a></div></div></section>
-<section><div class="wrap faqgrid"><div><div class="eyebrow">A few helpful answers</div><h2>Before we begin.</h2><p class="lead">A few things to know when planning your home interiors.</p></div><div>
-<details><summary>How accurate is the calculator?</summary><p>It provides an indicative planning range using simplified assumptions. Site measurements, materials and final scope may change the cost.</p></details>
-<details><summary>Can I design selected rooms only?</summary><p>Yes. Use the room counters to include only the spaces you want to plan.</p></details>
-<details><summary>Does this include every possible cost?</summary><p>No. Ask the actual company to confirm inclusions, exclusions, taxes, installation and other charges in a written quotation.</p></details>
-<details><summary>What happens when I request a quote?</summary><p>This demo opens WhatsApp with your selections pre-filled. It does not automatically book an appointment or store your details.</p></details>
-</div></div></section>
-<div class="cta"><div class="wrap ctainner"><div><div class="eyebrow">Your next chapter starts at home</div><h2>Have a space in mind? Let's talk about it.</h2></div><a class="btn" href="#calculator">Build Your Estimate ↗</a></div></div>
+<div class="topline"><span>SM INTERIORS</span><span>Thoughtful spaces · Jeedimetla, Hyderabad</span><span>Designed around you</span></div>
+<header><a class="logo" href="#home"><div class="monogram">SM</div><div><div class="logotext">SM INTERIORS</div><div class="logosub">Spaces with soul</div></div></a><nav class="nav" id="nav"><a href="#work">Our work</a><a href="#services">Services</a><a href="#studio">Studio</a><a href="#gallery">Inspiration</a><a href="#contact">Contact</a><a class="navbtn" href="#contact">Discuss your space ↗</a></nav><button class="hamb" id="hamb" aria-label="Open navigation">☰</button></header>
+<main>
+<section class="hero" id="home"><div class="heroimage"><div class="herocopy"><div class="eyebrow">Interiors, considered differently</div><h1>Spaces that<br><em>feel like you.</em></h1><p>Thoughtful interiors. Beautiful materials. Details that make a difference. Let’s shape a space that feels effortless to live in — and unmistakably yours.</p><div class="actions"><a class="btn btnlight" href="#work">Explore our style ↗</a><a class="btn btnoutline" href="#contact">Start a conversation</a></div></div><div class="heroindex"><strong>01 — 04</strong><span>Imagine · Design · Create</span></div></div></section>
+<div class="trustbar"><span>Residential interiors</span><span>Modern, timeless design</span><span>Details that matter</span><span>Hyderabad</span></div>
+<section class="section" id="work"><div class="sectionhead"><div><div class="kicker">Selected spaces · Design direction</div><h2>Made to be lived in.<br>Designed to be loved.</h2></div><p>From a welcoming living room to a considered kitchen, the best interiors balance beautiful design with the way you actually live.</p></div><div class="projectgrid"><a class="project" href="#contact"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" alt="Warm contemporary living room interior"><div class="projectcaption"><span>01 / Living spaces</span><h3>Warm minimalism.</h3><p>Soft textures, considered lighting and a calm palette that feels welcoming every day.</p></div></a><div class="projectstack"><a class="project" href="#contact"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Contemporary residential interior"><div class="projectcaption"><span>02 / Modern homes</span><h3>Quiet sophistication.</h3></div></a><a class="project" href="#contact"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Elegant interior with refined materials"><div class="projectcaption"><span>03 / Material & detail</span><h3>Every finish matters.</h3></div></a></div></div><p class="gallerynote">Images are design inspiration and are not verified SM Interiors projects. Replace with actual completed work before publishing as a portfolio.</p></section>
+<section class="section services" id="services"><div class="sectionhead"><div><div class="kicker">What we can create together</div><h2>One space. A hundred<br>thoughtful details.</h2></div><p>A good design begins with listening. Tell us how you live, what you love and what you want your space to become.</p></div><div class="servicegrid"><article class="service"><div class="num">01</div><h3>Home Interiors</h3><p>Bring your vision together with a cohesive look, practical layouts and a personal sense of style.</p><a href="#contact">Discuss your home ↗</a></article><article class="service"><div class="num">02</div><h3>Living & Bedrooms</h3><p>Comfortable, considered spaces shaped by lighting, storage, colour and texture.</p><a href="#contact">Explore the possibilities ↗</a></article><article class="service"><div class="num">03</div><h3>Modular Kitchens</h3><p>A smarter everyday kitchen with a focus on flow, function, finish and organisation.</p><a href="#contact">Plan a kitchen ↗</a></article><article class="service"><div class="num">04</div><h3>Wardrobes & Storage</h3><p>Thoughtful storage ideas that help your home feel clear, organised and uncluttered.</p><a href="#contact">Make room for more ↗</a></article><article class="service"><div class="num">05</div><h3>Materials & Finishes</h3><p>Explore a balanced mix of textures, surfaces, colours and details that work together.</p><a href="#contact">Find your finish ↗</a></article><article class="service"><div class="num">06</div><h3>Design Consultation</h3><p>Share your space, ideas and priorities to start shaping a direction that feels right for you.</p><a href="#contact">Let's talk ↗</a></article></div><p class="gallerynote">Service list is a proposed website structure. Confirm which services SM Interiors currently provides before going live.</p></section>
+<section class="section about" id="studio"><div class="aboutvisual"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85" alt="Elegant neutral home interior"><img class="smallimg" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=85" alt="Interior material and furniture detail"></div><div class="aboutcopy"><div class="kicker">The thinking behind the space</div><h2>Beautiful is good.<br>Personal is better.</h2><p>Your home should do more than look impressive. It should work with your routines, welcome your people and feel right long after a trend has passed.</p><p>Our design approach starts with your needs, your taste and the way you want to feel in your space. From the overall look to the smallest finish, every choice should have a reason.</p><div class="stats"><div class="stat"><strong>Made for you</strong><span>PERSONAL DESIGN DIRECTION</span></div><div class="stat"><strong>Detail-led</strong><span>THOUGHTFUL FINISHES</span></div></div><a class="btn btnblack" href="#contact">Tell us what you're imagining ↗</a></div></section>
+<section class="section process"><div class="sectionhead"><div><div class="kicker">A clear path from idea to space</div><h2>Good design starts<br>with a conversation.</h2></div><p>A simple, collaborative process to get your ideas out of your head and into a space you can enjoy.</p></div><div class="processgrid"><article class="step"><span>01</span><h3>Listen & understand</h3><p>We start with your space, needs, inspiration, priorities and budget.</p></article><article class="step"><span>02</span><h3>Shape the concept</h3><p>Explore the design direction, layout, materials and look that suits you.</p></article><article class="step"><span>03</span><h3>Refine the details</h3><p>Work through the key choices and practical details before moving forward.</p></article><article class="step"><span>04</span><h3>Bring it together</h3><p>Agree on the next steps and project scope based on the services offered.</p></article></div></section>
+<section class="section" id="gallery"><div class="sectionhead"><div><div class="kicker">A moodboard for your next chapter</div><h2>Find the feeling<br>you want to come home to.</h2></div><p>Warm woods, natural light, clean lines and layers of texture. Collect inspiration, then make it your own.</p></div><div class="gallerygrid"><a class="tall" href="#contact"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85" alt="Warm living room moodboard"></a><a href="#contact"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=85" alt="Modern home inspiration"></a><a href="#contact"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=85" alt="Refined interior details"></a><a href="#contact"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700&q=85" alt="Neutral interior inspiration"></a><a href="#contact"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=85" alt="Furniture and materials inspiration"></a></div><p class="gallerynote">Moodboard imagery is illustrative, sourced from Unsplash, and should not be presented as SM Interiors' own work.</p></section>
+<section class="section testimonial"><div class="quote-mark">“</div><div class="quote">The best spaces aren't just seen. They're felt — in the comfort, the flow and the little details that make them yours.</div><div class="quote-sub">The SM Interiors design philosophy · Suggested brand copy</div></section>
+<section class="contact" id="contact"><div class="contactinner"><div class="contactcopy"><div class="eyebrow">Let's talk about your space</div><h2>Have a room<br>in mind?</h2><p>Tell us what you're planning, whether it's a complete home or one room that needs a fresh perspective. Let's start with a conversation.</p><div class="contactdetails"><div><div class="detail-label">Visit / Find us</div><div class="detail-value">Vinayak Nagar, Subhash Nagar,<br>Jeedimetla, Hyderabad,<br>Telangana 500055</div></div><div><div class="detail-label">Call the studio</div><div class="detail-value"><a href="tel:09849595522">098495 95522</a><br>Listed hours: closes at 8 PM*</div></div></div><div class="actions"><a class="btn btnlight" href="tel:09849595522">Call SM Interiors ↗</a><a class="btn btnoutline" href="https://www.google.com/maps/search/?api=1&query=SM+Interiors+GF54%2BV93+Vinayak+Nagar+Subhash+Nagar+Jeedimetla+Hyderabad">Get directions</a></div><p style="font-size:9px;margin-top:16px">*Hours may change. Please confirm before visiting.</p></div><div class="contactvisual"><div class="contactcard"><small>Let's create something considered</small><h3>SM Interiors</h3><p>GF54+V93, Vinayak Nagar, Subhash Nagar,<br>Jeedimetla, Hyderabad, Telangana 500055</p><a href="https://www.google.com/maps/search/?api=1&query=SM+Interiors+GF54%2BV93+Vinayak+Nagar+Subhash+Nagar+Jeedimetla+Hyderabad">OPEN IN GOOGLE MAPS ↗</a></div></div></div></section>
 </main>
-<footer><div class="wrap"><div class="footerrow"><div class="logo">ATELIER LIVING<small>INTERIOR STUDIO</small></div><div><p>Thoughtful home interiors, designed around you.</p><div class="footerlinks"><a href="#projects">Projects</a><a href="#services">Services</a><a href="#calculator">Cost calculator</a><a href="#process">Our process</a></div></div></div><div class="bottom"><span>© <span id="year"></span> Atelier Living · Demo website</span><span>Replace sample branding, images, contact details and rates before publishing for a real company.</span></div></div></footer>
-<a class="float" href="#calculator">Let's plan your home ↗</a>
+<footer><div class="footertop"><a class="logo" href="#home"><div class="monogram">SM</div><div><div class="logotext">SM INTERIORS</div><div class="logosub">Spaces with soul</div></div></a><div class="footlinks"><a href="#work">Our work</a><a href="#services">Services</a><a href="#studio">Studio</a><a href="#gallery">Inspiration</a><a href="#contact">Contact</a><a href="tel:09849595522">Call us</a></div></div><div class="footbottom"><span>© <span id="year"></span> SM Interiors. Thoughtful spaces, made personal.</span><span>Jeedimetla · Hyderabad, India</span></div></footer>
+<a class="floatcontact" href="tel:09849595522">↗ &nbsp; Discuss your space</a>
 <script>
-const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-$('#year').textContent=new Date().getFullYear();
-$('#menu').addEventListener('click',()=>$('#links').classList.toggle('open'));
-$$('#links a').forEach(a=>a.addEventListener('click',()=>$('#links').classList.remove('open')));
-let bhk=1,step=0,rooms={living:1,kitchen:1,bedrooms:1,bathrooms:1,wardrobes:1,ceiling:0};
-const suggested={1:650,2:1000,3:1400,4:1900,5:2600};
-$$('[data-bhk]').forEach(b=>b.addEventListener('click',()=>{bhk=+b.dataset.bhk;$$('[data-bhk]').forEach(x=>x.classList.toggle('selected',x===b));$('#area').value=suggested[bhk];rooms.bedrooms=Math.min(bhk,5);$('#n-bedrooms').textContent=rooms.bedrooms;}));
-$$('[data-room]').forEach(b=>b.addEventListener('click',()=>{let k=b.dataset.room;rooms[k]=Math.max(0,Math.min(8,rooms[k]+ +b.dataset.d));$('#n-'+k).textContent=rooms[k];}));
-function showStep(n){step=n;$$('.pane').forEach(p=>p.classList.toggle('active',+p.dataset.step===step));$$('#progress span').forEach((s,i)=>s.classList.toggle('active',i<=step));$('#back').style.visibility=step===0?'hidden':'visible';$('#next').textContent=step===2?'Calculate my estimate →':'Continue →';$('#error').textContent='';}
-function money(n){return '₹'+Math.round(n).toLocaleString('en-IN');}
-function estimate(){let area=Math.max(250,Math.min(10000,+$('#area').value||suggested[bhk]));let finish=+$('#finish').value;let count=Object.values(rooms).reduce((a,b)=>a+b,0);let mid=area*850*(.72+Math.min(count,15)*.045)*finish;return {low:mid*.82,high:mid*1.22,area};}
-function message(){let e=estimate();return `Hello! I'd like an interior design estimate. Home: ${bhk===5?'Villa / 5+ BHK':bhk+' BHK'}; Area: ${e.area} sq ft; Rooms: ${Object.entries(rooms).filter(([k,v])=>v>0).map(([k,v])=>k+': '+v).join(', ')}; Finish: ${$('#finish').selectedOptions[0].text}; Indicative range: ${money(e.low)}–${money(e.high)}; Location: ${$('#city').value}; Timeline: ${$('#timeline').value}; Name: ${$('#name').value}; Phone: ${$('#phone').value}. Please contact me to discuss a detailed quote.`;}
-$('#back').addEventListener('click',()=>showStep(step-1));
-$('#next').addEventListener('click',()=>{if(step<2){showStep(step+1);return;}let phone=$('#phone').value.replace(/\D/g,'');if(!$('#name').value.trim()||phone.length<10){$('#error').textContent='Please enter your name and a valid 10-digit phone number.';return;}let e=estimate();$('#range').textContent=money(e.low)+' – '+money(e.high);$('#breakdown').textContent=`Based on about ${e.area.toLocaleString('en-IN')} sq. ft., selected rooms and your finish preference. A site assessment is required for final pricing.`;$('#result').classList.add('show');$('#next').style.display='none';$('#result').scrollIntoView({behavior:'smooth',block:'nearest'});});
-$('#send').addEventListener('click',()=>window.open('https://wa.me/?text='+encodeURIComponent(message()),'_blank','noopener,noreferrer'));
-$('#edit').addEventListener('click',()=>{$('#result').classList.remove('show');$('#next').style.display='inline-block';showStep(0);});
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav'),hamb=document.getElementById('hamb');
+hamb.addEventListener('click',()=>{const open=nav.classList.toggle('open');nav.style.cssText=open?'display:flex;position:absolute;top:74px;left:0;right:0;padding:22px 6vw;background:var(--cream);flex-direction:column;align-items:stretch;box-shadow:0 15px 30px #0001':'';nav.querySelectorAll('a:not(.navbtn)').forEach(a=>a.style.display=open?'block':'')});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{if(innerWidth<=850){nav.classList.remove('open');nav.removeAttribute('style');nav.querySelectorAll('a:not(.navbtn)').forEach(x=>x.style.display='')}}));
 </script>
-</body>
-</html>
+</body></html>
